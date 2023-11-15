@@ -1,6 +1,4 @@
 import ENV from "../../../env/index.js";
-
-import { generateAccess, generateRefresh } from "../../../utils/index.js";
 import { Request, Response } from "express";
 
 const authenticate = async (_req: Request, _res: Response) => {
@@ -21,10 +19,6 @@ const authenticate = async (_req: Request, _res: Response) => {
     data: response.data,
     status: "success",
     message: "Authenticate user success",
-    meta: {
-      access: generateAccess({}),
-      refresh: generateRefresh({}),
-    },
   });
 };
 
